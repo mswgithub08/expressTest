@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+    	*{
+    		margin: 0;
+    		padding: 0;
+    	}
+    	li{
+    		list-style: none;
+    		text-align: center;
+    	}
+    	.box{
+    		display: flex;
+    		flex-wrap: wrap;
+    	}
+    	.list{
+    		width: 100%;
+    		display: flex;
+    	}
+    	.list li{
+    		width: 33.33%;
+    	}
+    	.result{
+    		display: flex;
+    		flex-wrap: wrap;
+    		width: 100%;
+    	}
+    	.result li{
+    		width: 33.33%;
+    		color: red;
+    	}
+    </style>
+  </head>
+  <body>
+	  <div class="box">
+	     <ul class="list">
+	     	<li>学生姓名</li>
+	     	<li>数学成绩</li>
+	     	<li>英语成绩</li>
+	     </ul>
+	     <ul class="result"> 	
+	     	<% for(var i=0;i<data.length;i++){ %>
+	     		<li><%= data[i].name %></li>
+	     		<li><%= data[i].score.math %></li>
+	     		<li><%= data[i].score.Englis %></li>
+	     	<% } %>	     	
+	     </ul>
+	     <a href="/blog?page=1">1</a>
+	   </div>  
+  </body>
+</html>
